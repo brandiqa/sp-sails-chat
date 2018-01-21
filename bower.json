@@ -1,0 +1,23 @@
+{
+  "name": "sp-chat-app",
+  "description": "a Sails chat application",
+  "main": "app.js",
+  "authors": [
+    "Michael Wanyoike"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/brandiqa/sp-sails-chat",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.13",
+    "jsrender": "^0.9.90"
+  }
+}

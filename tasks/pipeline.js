@@ -28,6 +28,11 @@ var jsFilesToInject = [
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
+  // Vendor Dependencies
+  'vendor/jquery/dist/jquery.js',
+  'vendor/semantic/dist/semantic.js',
+  'vendor/jsrender/jsrender.js',
+
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 
@@ -83,5 +88,3 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
   }
   return require('path').join('assets/',tplPath);
 });
-
-
