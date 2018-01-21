@@ -1,9 +1,31 @@
 <% include /partials/menu %>
 
-<div class="ui container">
-  <h1 class="ui centered header">Account Profile</h1>
-  <hr>
-  <div class="section">
-  [ TODO put user-form here]
+  <div class="ui container">
+    <h1 class="ui centered header">Account Profile</h1>
+    <hr>
+    <div class="section">
+      <img class="ui small centered circular image" src="<%= data.avatar %>">
+      <div class="ui grid">
+        <form action="<%= '/user/update/'+  data.id %>" method="post" class="ui centered form">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" value="<%= data.name %>">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="text" name="email" value="<%= data.email %>">
+          </div>
+          <div class="field">
+            <label>Location</label>
+            <input type="text" name="location" value="<%= data.location %>">
+          </div>
+          <div class="field">
+            <label>Bio</label>
+            <textarea name="bio" rows="4" cols="40"><%= data.bio %></textarea>
+          </div>
+          <input type="hidden" name="avatar" value=<%=data.avatar %>>
+          <button class="ui right floated  orange button" type="submit">Update</button>
+        </form>
+      </div>
+    </div>
   </div>
-</div>
