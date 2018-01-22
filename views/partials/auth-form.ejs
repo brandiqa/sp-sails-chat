@@ -1,0 +1,19 @@
+<form method="post" action="/auth/authenticate" class="ui form">
+  <div class="field">
+    <label>Full Names</label>
+    <input type="text" name="name" placeholder="Full Names" value="<%= typeof name != 'undefined' ? name : '' %>">
+  </div>
+  <div class="required field">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+  </div>
+  <button class="ui teal button" type="submit" name="action" value="signup">Sign Up & Login</button>
+  <button class="ui blue button" type="submit" name="action" value="login">Login</button>
+  <p class="note">*Provide email only for Login</p>
+</form>
+<% if(typeof error != 'undefined') { %>
+<div class="ui error message">
+  <div class="header"><%= error.title %></div>
+  <p><%= error.message %></p>
+</div>
+<% } %>
