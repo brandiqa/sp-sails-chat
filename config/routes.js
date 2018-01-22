@@ -41,6 +41,10 @@ module.exports.routes = {
   },
   '/chat': {
     view: 'chatroom'
+  },
+  '/postMessage': {
+    controller: 'ChatMessageController',
+    action: 'postMessage'
   }
 
   /***************************************************************************

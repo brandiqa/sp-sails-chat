@@ -1,0 +1,50 @@
+<div class="ui basic segment">
+  <div class="ui form">
+    <div class="ui field">
+      <label>Post Message</label>
+      <textarea id="post-field" rows="2"></textarea>
+    </div>
+    <button id="post-btn" class="ui right floated large orange button" type="submit">Post</button>
+  </div>
+  <div id="post-err" class="ui tiny compact negative message" style="display:none;">
+    <p>Oops! Something went wrong.</p>
+ </div>
+</div>
+
+
+<script type="text/javascript">
+
+  function activateChat() {
+    const postField = $('#post-field');
+    const postButton = $('#post-btn');
+    const postErr = $('#post-err');
+
+    // Bind to click event
+    postButton.click(postMessage);
+
+    // Bind to enter key event
+    postField.keypress(function(e) {
+      var keycode = (e.keyCode ? e.keyCode : e.which);
+      if (keycode == '13') {
+          postMessage();
+      }
+    });
+
+    function postMessage() {
+      if(postField.val() == "") {
+        alert("Please type a message!");
+      } else {
+        let text = postField.val();
+        io.socket.post('/postMessage', { message: text }, function(resData, jwRes) {
+          if(jwRes.statusCode != 200) {
+              postErr.html("<p>" +  resData.message +"</p>")
+              postErr.show();
+          } else {
+            postField.val(''); // clear input field
+          }
+        });
+      }
+    }
+  }
+
+</script>
