@@ -40,7 +40,8 @@ module.exports.routes = {
     action: 'render'
   },
   '/chat': {
-    view: 'chatroom'
+      controller: 'ChatMessageController',
+      action: 'render'
   },
   '/postMessage': {
     controller: 'ChatMessageController',
