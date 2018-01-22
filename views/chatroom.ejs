@@ -5,13 +5,15 @@
 
     <!-- Members List Section -->
     <div class="four wide column">
+      <!-- [ TODO chat-users ] -->
       <% include partials/chat-users.ejs %>
     </div>
 
     <div class="twelve wide column">
 
       <!-- Chat Messages -->
-      [ TODO chat-messages ]
+      <!-- [ TODO chat-messages ] -->
+      <% include partials/chat-messages.ejs %>
 
       <hr>
 
@@ -25,5 +27,6 @@
 <script type="text/javascript">
   window.onload = function() {
     loadUsers();
+    loadMessages();
   }
 </script>
