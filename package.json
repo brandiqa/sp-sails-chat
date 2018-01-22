@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ejs": "2.5.5",
+    "gravatar": "^1.6.0",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-coffee": "1.0.0",
