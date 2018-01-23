@@ -29,8 +29,8 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
 
   // Vendor Dependencies
-  'vendor/jquery/dist/jquery.js',
-  'vendor/semantic/dist/semantic.js',
+  'vendor/jquery/jquery.min.js',
+  'vendor/semantic-ui/semantic.js',
   'vendor/jsrender/jsrender.js',
 
   // Dependencies like jQuery, or Angular are brought in here
